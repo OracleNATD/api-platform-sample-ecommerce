@@ -1,0 +1,45 @@
+FORMAT: 1A
+HOST: http://153.92.39.42:8001/lm/bealls/
+
+# eCommerce Search
+
+Provides results from the eCommerce system based on the search terms provided.
+
+## Usage [/bySearchTerm/{searchTerms}]
+
+### Search by Terms [GET]
+Provides results from the eCommerce system based on the search terms provided.
+
++ Parameters
+    + searchTerms: alia (stromg) - Search terms
+    
++ Request
+
+    + Headers
+    
+            tenant-id: 1 (number) - Customer's tenant-id
+            api-key: f3ae03ca-0937-4510-be76-775d6ada45e2 (number) 
+
++ Response 200 (application/json)
+        
+        {
+        
+            "recordSetTotalMatches": "1",
+            "recordSetTotal": 1,
+            "resourceName": "productview",
+            "resourceId": "https://qa-api.inc.com/search/resources/store/10151/productview/bySearchTerm/alia?pageNumber=1&pageSize=10&catalogId=12003",
+            "recordSetStartNumber": 1,
+            "recordSetComplete": "true",
+            "recordSetCount": 1,
+            "catalogEntryView": [ ],
+            "metaData": {
+                "spellcheck": [
+                    "aqua",
+                    "all"
+                ],
+                "price": "1",
+                "searchTerm": "alia",
+                "minMatch": "0"
+            }
+        
+        }
